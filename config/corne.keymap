@@ -174,73 +174,48 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
-            display-name = "BASE";
+        base {
             bindings = <
-&kp TAB        &kp Q       &kp W       &kp E         &kp R         &kp T          &kp Y       &kp U         &kp I         &kp O        &kp P        &kp BSPC
-&mt LCTRL ESC  &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F   &kp G          &kp H       &mt RSHFT J   &mt RCTRL K   &mt RALT L   &mt RGUI SQT &hyper
-&kp LSHFT      &kp Z       &kp X       &kp C         &kp V         &kp B          &kp N       &kp M         &kp COMMA     &kp DOT      &kp FSLH     &kp ESC
-                                        &lt MEDIA ESC &lt NAV SPACE &lt MOUSE TAB  &lt SYM RET &lt NUM BSPC  &lt FUN DEL
+&bootloader  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &bootloader
+&none        &to 4  &to 3  &to 2  &to 1  &none    &none  &to 1  &to 2  &to 3  &to 4  &none
+&none        &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                           &none  &none  &none    &none  &none  &none
             >;
         };
 
-        nav_layer {
-            display-name = "NAV";
+        qwerty {
             bindings = <
-&none          &none       &none       &none         &none         &none          &kp LG(LS(Z)) &kp LG(V)   &kp LG(C)     &kp LG(X)    &kp LG(Z)    &none
-&none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &none          &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT    &kp CAPS     &none
-&none          &none       &none       &none         &none         &none          &kp INS     &kp HOME      &kp PG_DN     &kp PG_UP    &kp END      &none
-                                       &none         &none         &none          &kp RET     &kp BSPC      &kp DEL
+&kp TAB    &kp Q  &kp W  &kp E  &kp R    &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp GRAVE
+&kp LCTRL  &kp A  &kp S  &kp D  &kp F    &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp ENTER
+&kp LSHFT  &kp Z  &kp X  &kp C  &kp V    &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                         &to 0  &kp ESC  &kp ENTER    &kp SPACE  &kp BSPC  &tog 3
             >;
         };
 
-        num_layer {
-            display-name = "NUM";
+        gallium {
             bindings = <
-&none          &kp LBKT    &kp N7      &kp N8        &kp N9        &kp RBKT       &none       &none         &none         &none        &none        &none
-&none          &kp SEMI    &kp N4      &kp N5        &kp N6        &kp EQUAL      &none       &kp RSHFT     &kp RCTRL     &kp RALT     &kp RGUI     &none
-&none          &kp GRAVE   &kp N1      &kp N2        &kp N3        &kp BSLH       &none       &none         &none         &none        &none        &none
-                                       &kp DOT       &kp N0        &kp MINUS      &none       &none         &none
+&kp TAB    &kp B  &kp L  &kp D  &kp C    &kp V        &kp J      &kp F          &kp O     &kp U     &kp COMMA  &kp GRAVE
+&kp LCTRL  &kp N  &kp R  &kp T  &kp S    &kp G        &kp Y      &kp H          &kp A     &kp E     &kp I      &kp ENTER
+&kp LSHFT  &kp X  &kp Q  &kp M  &kp W    &kp Z        &kp K      &kp P          &kp APOS  &kp SEMI  &kp DOT    &kp RSHFT
+                         &to 0  &kp ESC  &kp ENTER    &kp SPACE  &kp BACKSPACE  &tog 3
             >;
         };
 
-        media_layer {
-            display-name = "MEDIA";
+        numbers {
             bindings = <
-&none          &none       &none       &none         &none         &none          &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &none      &none
-&none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &none          &ext_power EP_TOG &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP &kp C_NEXT   &none
-&none          &none       &none       &none         &none         &none          &out OUT_TOG &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
-                                       &none         &none         &none          &kp C_STOP  &kp C_PP      &kp C_MUTE
+&kp TILDE     &kp EXCL      &kp AT         &kp HASH        &kp DOLLAR        &kp PERCENT             &kp CARET              &kp AMPS           &kp ASTRK        &kp MINUS         &kp PLUS   &kp EQUAL
+&kp PIPE      &kp N1        &kp N2         &kp N3          &kp N4            &kp N5                  &kp N6                 &kp N7             &kp N8           &kp N9            &kp N0     &kp BACKSLASH
+&kp LEFT_GUI  &kp QUESTION  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp SLASH  &none
+                                           &to 0           &kp ESC           &kp ENTER               &kp SPACE              &kp BSPC           &none
             >;
         };
 
-        sym_layer {
-            display-name = "SYM";
+        navigation {
             bindings = <
-&none          &kp LBRC    &kp AMPS    &kp ASTRK     &kp LPAR      &kp RBRC       &none       &none         &none         &none        &none        &none
-&none          &kp COLON   &kp DLLR    &kp PRCNT     &kp CARET     &kp PLUS       &none       &kp RSHFT     &kp RCTRL     &kp RALT     &kp RGUI     &none
-&none          &kp TILDE   &kp EXCL    &kp AT        &kp HASH      &kp PIPE       &none       &none         &none         &none        &none        &none
-                                       &kp LPAR      &kp RPAR      &kp UNDER      &none       &none         &none
-            >;
-        };
-
-        fun_layer {
-            display-name = "FUN";
-            bindings = <
-&none          &kp F12     &kp F7      &kp F8        &kp F9        &kp PSCRN      &none       &none         &none         &none        &none        &none
-&none          &kp F11     &kp F4      &kp F5        &kp F6        &kp SLCK       &none       &kp RSHFT     &kp RCTRL     &kp RALT     &kp RGUI     &none
-&none          &kp F10     &kp F1      &kp F2        &kp F3        &kp PAUSE_BREAK &none      &none         &none         &none        &none        &none
-                                       &kp K_APP     &kp SPACE     &kp TAB        &none       &none         &none
-            >;
-        };
-
-        mouse_layer {
-            display-name = "MOUSE";
-            bindings = <
-&none          &none       &none       &none         &none         &none          &none            &none            &none          &none             &none        &none
-&none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &none          &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP   &mmv MOVE_RIGHT   &none        &none
-&none          &none       &none       &none         &none         &none          &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP   &msc SCRL_RIGHT   &none        &none
-                                       &none         &none         &none          &mkp MCLK        &mkp LCLK        &mkp RCLK
+&kp ESC    &none  &none  &none       &none  &bootloader    &bootloader  &none     &kp UP_ARROW  &none      &none  &none
+&kp LCTRL  &none  &none  &none       &none  &sys_reset     &sys_reset   &kp LEFT  &kp DOWN      &kp RIGHT  &none  &none
+&kp LSHFT  &none  &none  &none       &none  &none          &none        &none     &none         &none      &none  &none
+                         &kp ESCAPE  &to 0  &none          &kp SPACE    &kp BSPC  &none
             >;
         };
     };
