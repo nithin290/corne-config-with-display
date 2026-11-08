@@ -195,7 +195,7 @@
         gallium {
             bindings = <
 &kp TAB    &kp B           &kp L           &kp D             &kp C               &kp V      &kp J          &kp F                &kp O              &kp U            &kp SEMI         &kp BACKSLASH
-&kp LCTRL  &mt LEFT_GUI N  &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LEFT_CONTROL T  &kp G      &kp Y          &mt RIGHT_CONTROL H  &mt RIGHT_SHIFT A  &mt RIGHT_ALT E  &mt RIGHT_GUI I  &kp RIGHT_ALT
+&kp LCTRL  &mt LEFT_GUI N  &mt LEFT_ALT R  &mt LEFT_SHIFT T  &mt LEFT_CONTROL S  &kp G      &kp Y          &mt RIGHT_CONTROL H  &mt RIGHT_SHIFT A  &mt RIGHT_ALT E  &mt RIGHT_GUI I  &kp RIGHT_ALT
 &kp LSHFT  &kp X           &kp Q           &kp M             &kp W               &kp Z      &kp K          &kp P                &kp COMMA          &kp DOT          &kp QUESTION     &kp LEFT_WIN
                                            &to 0             &kp ENTER           &kp ESC    &kp BACKSPACE  &kp SPACE            &tog 3
             >;
